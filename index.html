@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanmoy Naskar Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="logo.svg.svg">
+    <style>
+        html {
+            font-size: 12px; /* scale layout ~25% smaller from base 16px */
+        }
+        .neon-text {
+            color: #0ff;
+            text-shadow: 0 0 2.5px #0ff, 0 0 5px #0ff, 0 0 7.5px #0ff, 0 0 10px #0ff;
+        }
+        .neon-box {
+            border: none;
+            box-shadow: none;
+        }
+        .neon-box:hover {
+            transform: translateY(-5px);
+        }
+        .skill-icon {
+            filter: drop-shadow(0 0 5px #0ff);
+        }
+        .glow-on-hover:hover {
+            filter: drop-shadow(0 0 8px #0ff);
+        }
+        
+        /* Disable text selection and user interactions */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Disable image dragging */
+        img {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            pointer-events: none;
+        }
+        
+        /* Disable text highlighting */
+        ::selection {
+            background: transparent;
+        }
+        
+        ::-moz-selection {
+            background: transparent;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-mono overflow-x-hidden">
+    <div id="vanta-bg" class="fixed inset-0 -z-10"></div>
+    
+    <!-- <nav class="p-6 flex justify-between items-center bg-transparent"> -->
+        <!-- <div class="text-2xl neon-text">HACKER_DEV</div> -->
+        <!-- <div class="flex space-x-12 ml-auto">
+            <a href="#about" class="neon-text hover:text-green-300 transition">About</a>
+            <a href="#skills" class="neon-text hover:text-green-300 transition">Skills</a>
+            <a href="#projects" class="neon-text hover:text-green-300 transition">Projects</a>
+            <a href="#contact" class="neon-text hover:text-green-300 transition">Contact</a>
+        </div> -->
+    <!-- </nav> -->
+
+    <main class="mx-auto px-6 py-20 max-w-screen-xl">
+        <section id="hero" class="min-h-[60vh] flex flex-col justify-center items-center text-center">
+            <!-- <h6 class="text-2xl md:text-6xl font-bold neon-text mb-6">TANMOY NASKAR</h6> -->
+            <h6 class="text-2xl md:text-6xl font-bold neon-text mb-6">ETHICAL HACKER & <span class="text-green-400">SECURITY ANALYST</span></h6>
+            <h2 class="text-3xl md:text-5xl neon-text mb-10"> </h2>
+            <div class="flex space-x-4">
+                <!-- <button class="px-8 py-3 neon-box rounded-full glow-on-hover">EXPLORE</button> -->
+                <!-- <button class="px-8 py-3 neon-box rounded-full glow-on-hover">CONTACT</button> -->
+            </div>
+            <div class="mt- animate-bounce">
+                <i data-feather="chevron-down" class="w-12 h-12 neon-text"></i>
+            </div>
+            <!-- Download CV Section -->
+            <div class="mt-10 flex justify-center">
+                <a href="https://drive.google.com/file/d/1vgvDsx71yflJj0QnlvwlxHe_5izITR7y/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                   class="px-8 py-3 neon-box rounded-full glow-on-hover bg-transparent backdrop-blur-sm border border-cyan-400 text-cyan-300 font-semibold text-lg flex items-center gap-2 hover:bg-cyan-400/10 hover:text-cyan-200 transition-all duration-300">
+                    <i data-feather="download" class="w-5 h-5"></i>
+                    Download CV
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="-mt-6 pt-0 pb-20">
+            <h2 class="text-4xl neon-text mb-10 text-center"><span class="inline-flex items-center gap-2 justify-center"><i data-feather="user"></i> ABOUT ME</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="flex justify-center order-2 md:order-1">
+                    <div class="relative w-64 h-64 neon-box rounded-full overflow-hidden">
+                        <img src="img.jpg.jpg" alt="Hacker" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-green-900 bg-opacity-20"></div>
+                    </div>
+                </div>
+                <div class="neon-box p-8 rounded-lg order-1 md:order-2">
+                    <p class="text-lg mb-4">Hi — I'm Tanmoy, a security enthusiast who specializes in finding vulnerabilities that others miss.</p>
+                    <p class="text-lg mb-4">My mission is to help organizations secure their digital assets while staying one step ahead of malicious actors.</p>
+                    <!-- <p class="text-lg">My focus areas include web application security, API testing, cloud misconfigurations, exploit development, and adversary simulations.</p> -->
+                    <p class="text-lg">I'm a passionate ethical hacker with over 1.5 years of experience in cybersecurity, penetration testing, and vulnerability assessment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience-education" class="py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Experience Section -->
+                <div>
+                    <h2 class="text-4xl neon-text mb-10 text-center"><span class="inline-flex items-center gap-2 justify-center"><i data-feather="briefcase"></i> EXPERIENCE</span></h2>
+                    <div class="neon-box p-6 rounded-lg flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="text-xl neon-text mb-2">Cybersecurity & Ethical Hacking Internship</h3>
+                            <p class="text-green-400 mb-2 hover:text-green-300 cursor-pointer inline-flex items-center" onclick="window.open('https://drive.google.com/open?id=1SujxrFzqQZw46iEtXtjo60s3tZZE4d2-&usp=drive_fs', '_blank', 'noopener,noreferrer')">
+                                CODETECH IT SOLUTIONS | Feb 2025 - March 2025
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </p>
+                            <ul class="list-disc pl-5 text-gray-300">
+                                <li>Developed custom security tools and scripts</li>
+                                <li>Led security awareness training programs</li>
+                                <li>Gained hands-on experience in ethical hacking</li>
+                                <li>Learned about various security tools and techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div>
+                    <h2 class="text-4xl neon-text mb-10 text-center"><span class="inline-flex items-center gap-2 justify-center"><i data-feather="book"></i> EDUCATION</span></h2>
+                    <div class="neon-box p-6 rounded-lg">
+                        <h3 class="text-xl neon-text mb-2">Diploma in Computer Science and Technology</h3>
+                        <p class="text-green-400 mb-2">Central Calcutta Polytechnic | 2022 - 2025</p>
+                        <p class="text-gray-300">Specialized in core concepts of Computer Science and other related subjects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-20">
+            <h2 class="text-4xl neon-text mb-10 text-center"><span class="inline-flex items-center gap-2 justify-center"><i data-feather="award"></i> CERTIFICATIONS</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="neon-box p-6 rounded-lg flex flex-col justify-between h-full">
+                    <div>
+                        <h3 class="text-xl neon-text mb-2">Introduction to CIP</h3>
+                        <p class="text-green-400 mb-2">OPSWAT Academy</p>
+                        <p class="text-gray-300">Validated skills in cyber defense, threat intelligence, attack vectors, and countermeasures.</p>
+                    </div>
+                    <div class="mt-4 flex justify-end">
+                        <a href="https://learn.opswatacademy.com/certificate/JGiNNLmvKQ?query=" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-400 hover:text-green-300">
+                            <span class="mr-1">View Certificate</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="neon-box p-6 rounded-lg flex flex-col justify-between h-full">
+                    <div>
+                        <h3 class="text-xl neon-text mb-2">Ethical Hacking and Cyber Security workshop @ IIT Guwahati</h3>
+                        <p class="text-green-400 mb-2">World Technocon</p>
+                        <p class="text-gray-300">Sqli, Xss, metasploit, Sql injection, Xss injection, flipper zero, and other related concepts.</p>
+                    </div>
+                    <div class="mt-4 flex justify-end">
+                        <a href="https://drive.google.com/file/d/1C49-G13-Ouzw5pMEgOkXAIYqf8zrDv8I/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-400 hover:text-green-300">
+                            <span class="mr-1">View Certificate</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="neon-box p-6 rounded-lg flex flex-col justify-between h-full">
+                    <div>
+                        <h3 class="text-xl neon-text mb-2">Cybersecurity Bootcamp</h3>
+                        <p class="text-green-400 mb-2">Udemy</p>
+                        <p class="text-gray-300">Hands-on Malware detection, prevention, Network security, operating system security, internet security, and other related concepts.</p>
+                    </div>
+                    <div class="mt-4 flex justify-end">
+                        <a href="https://www.udemy.com/certificate/UC-78d237bd-27e5-482d-8ab8-14e6074de8a7/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-400 hover:text-green-300">
+                            <span class="mr-1">View Certificate</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="neon-box p-6 rounded-lg flex flex-col justify-between h-full">
+                    <div>
+                        <h3 class="text-xl neon-text mb-2">Android Malware Analysis</h3>
+                        <p class="text-green-400 mb-2">Udemy</p>
+                        <p class="text-gray-300">Android malware analysis, detection, and prevention.</p>
+                    </div>
+                    <div class="mt-4 flex justify-end">
+                        <a href="https://www.udemy.com/certificate/UC-afd0300d-8171-43a8-b786-0dc7b20f59b3/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-400 hover:text-green-300">
+                            <span class="mr-1">View Certificate</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl neon-text mb-10 text-center"><span class="inline-flex items-center gap-2 justify-center"><i data-feather="tool"></i> MY SKILLS</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="neon-box p-6 rounded-lg text-center">
+                    <i data-feather="shield" class="w-12 h-12 mx-auto mb-4 skill-icon text-green-400"></i>
+                    <h3 class="text-xl mb-2">Penetration Testing</h3>
+                    <p class="text-gray-300">Network & Web App Pentesting</p>
+                </div>
+                <div class="neon-box p-6 rounded-lg text-center">
+                    <i data-feather="code" class="w-12 h-12 mx-auto mb-4 skill-icon text-green-400"></i>
+                    <h3 class="text-xl mb-2">Reverse Engineering</h3>
+                    <p class="text-gray-300">Malware Analysis & Exploit Dev</p>
+                </div>
+                <div class="neon-box p-6 rounded-lg text-center">
+                    <i data-feather="lock" class="w-12 h-12 mx-auto mb-4 skill-icon text-green-400"></i>
+                    <h3 class="text-xl mb-2">Cryptography</h3>
+                    <p class="text-gray-300">Encryption & Secure Protocols</p>
+                </div>
+                <div class="neon-box p-6 rounded-lg text-center">
+                    <i data-feather="wifi" class="w-12 h-12 mx-auto mb-4 skill-icon text-green-400"></i>
+                    <h3 class="text-xl mb-2">Network Security</h3>
+                    <p class="text-gray-300">Firewalls & IDS/IPS Systems</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl neon-text mb-10 text-center">
+                <span class="inline-flex items-center gap-2 justify-center">
+                    <i data-feather="layers"></i> RECENT PROJECTS
+                </span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="neon-box p-6 rounded-lg flex flex-col h-full">
+                    <div>
+                        <h3 class="text-xl neon-text mb-2">CyberX</h3>
+                        <p class="text-gray-300">A robust CLI security suite offering military-grade file protection, activity monitoring, and password management.</p>
+                    </div>
+                    <div class="mt-4 flex justify-end">
+                        <a href="https://github.com/itzTron/CyberX" target="_blank" rel="noopener noreferrer" class="neon-text hover:text-green-300 flex items-center gap-1">
+                            <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="neon-box p-6 rounded-lg flex flex-col h-full">
+                    <div>
+                        <h3 class="text-xl neon-text mb-2">Penetration Testing Toolkit</h3>
+                        <p class="text-gray-300">This is a CLI-based penetration testing toolkit built using Python. It includes multiple modules such as:
+
+                            Port Scanner,
+                            Brute-Force SSH Attack,
+                            Password Generator,
+                            Network Mapper,
+                            Wi-Fi Deauthentication Attack,
+                            Remote Vulnerability Scanner</p>
+                    </div>
+                    <div class="mt-4 flex justify-end">
+                        <a href="https://github.com/itzTron/PENETRATION-TESTING-TOOLKIT" target="_blank" rel="noopener noreferrer" class="neon-text hover:text-green-300 flex items-center gap-1">
+                            <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="neon-box p-6 rounded-lg flex flex-col h-full">
+                    <div>
+                        <h3 class="text-xl neon-text mb-2">Web Vulnerability Scanner</h3>
+                        <p class="text-gray-300">A lightweight Python-based web vulnerability scanner to detect common vulnerabilities like SQL Injection and Cross-Site Scripting (XSS) in web applications.</p>
+                    </div>
+                    <div class="mt-4 flex justify-end">
+                        <a href="https://github.com/itzTron/Web-Vulnerability-Scanner" target="_blank" rel="noopener noreferrer" class="neon-text hover:text-green-300 flex items-center gap-1">
+                            <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20">
+            <h2 class="text-4xl neon-text mb-10 text-center"><span class="inline-flex items-center gap-2 justify-center"><i data-feather="mail"></i> CONNECT WITH ME</span></h2>
+            <div class="max-w-2xl mx-auto neon-box p-8 rounded-lg">
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/itzTron" class="neon-text hover:text-green-300" target="_blank" rel="noopener noreferrer"><i data-feather="github" class="w-8 h-8"></i></a>
+                    <a href="https://www.facebook.com/itztony.sh" class="neon-text hover:text-green-300" target="_blank" rel="noopener noreferrer"><i data-feather="facebook" class="w-8 h-8"></i></a>
+                    <a href="https://www.instagram.com/itztony.sh/" class="neon-text hover:text-green-300" target="_blank" rel="noopener noreferrer"><i data-feather="instagram" class="w-8 h-8"></i></a>
+                    <a href="https://www.linkedin.com/in/tanmoy-naskar/" class="neon-text hover:text-green-300" target="_blank" rel="noopener noreferrer"><i data-feather="linkedin" class="w-8 h-8"></i></a>
+                    <a href="mailto:tanmoyn681@gmail.com" class="neon-text hover:text-green-300" target="_blank" rel="noopener noreferrer"><i data-feather="mail" class="w-8 h-8"></i></a>
+                    <!-- <a href="#" class="neon-text hover:text-green-300 transition"><i data-feather="phone" class="w-8 h-8"></i></a> -->
+                    <a href="https://wa.me/+919800656035" class="neon-text hover:text-green-300" target="_blank" rel="noopener noreferrer"><i data-feather="message-circle" class="w-8 h-8"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center text-gray-400">
+        <p>© DEVELOPED BY Tanmoy Naskar. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fallback background, VANTA animation, and Feather icons initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            const vantaBg = document.getElementById('vanta-bg');
+            if (vantaBg) {
+                vantaBg.style.background = 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)';
+            }
+            
+            // Initialize VANTA background
+            function initVanta() {
+                if (window.VANTA && window.VANTA.NET) {
+                    try {
+                        window.VANTA.NET({
+                            el: "#vanta-bg",
+                            mouseControls: true,
+                            touchControls: true,
+                            gyroControls: false,
+                            minHeight: 200.00,
+                            minWidth: 200.00,
+                            scale: 1.00,
+                            scaleMobile: 1.00,
+                            color: 0x00ffff,
+                            backgroundColor: 0x000011,
+                            points: 15.00,
+                            maxDistance: 25.00,
+                            spacing: 20.00,
+                            showDots: true,
+                            showLines: true,
+                            lineColor: 0x00ff88,
+                            dotColor: 0x00ffff,
+                            pointSize: 2.5,
+                            lineWidth: 1.2
+                        });
+                    } catch (e) {
+                        console.log('VANTA initialization failed:', e);
+                    }
+                } else {
+                    setTimeout(initVanta, 100);
+                }
+            }
+            initVanta();
+            
+            // Initialize Feather icons
+            function initFeather() {
+                if (window.feather) {
+                    window.feather.replace();
+                } else {
+                    setTimeout(initFeather, 100);
+                }
+            }
+            initFeather();
+        });
+    </script>
+    <script src="app.min.js" type="text/javascript"></script>
+    <!--# sourceMappingURL=app.min.js.map -->
+</body>
+</html>
