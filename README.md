@@ -27,8 +27,8 @@ This site is designed to showcase your **skills, projects, certifications, and s
 
 1. Clone the repo  
    ```bash
-   git clone {}
-   cd Portfolio_Website
+   git clone https://github.com/itzTron/EH_Portfolio_Website.git
+   cd EH_Portfolio_Website
 
 # Security features
 ## Source File Protection
